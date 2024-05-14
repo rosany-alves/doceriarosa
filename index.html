@@ -5,48 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Doceria Online </title>
     <link rel="shortcut icon" href="images/icons/cafe.svg" type="image/x-icon">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="../doceriarosa/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../doceriarosa/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="styles/index.css">
   </head>
-
-  <body>
-    <div class="d-flex flex-column wrapper">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom shadow-sm mb-3">
+  <body data-bs-theme="light">
+  <div class="d-flex flex-column wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom shadow-sm mb-3">
         <div class="container">
-          <a class="navbar-brand" href="/"><b>Doceria Online</b></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-          <div class="collapse navbar-collapse">
-            <ul class="navbar-nav flex-grow-1">
-              <li class="nav-item">
-                <a href="#" class="nav-link text-white">Principal</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link text-white">Contato</a>
-              </li>
-            </ul>
-            <div class="align-self-end">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a href="#" class="nav-link text-white">Quero me cadastrar</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link text-white">Entrar</a>
-                </li>
-                <li class="nav-item">
-                  <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"></span>
-                  <a href="/carrinho.html" class="nav-link text-white">
-                    <i class="bi-cart" style="font-size:24px;line-height:24px;"></i>
-                  </a>
-                </li>
-              </ul>
+            <a class="navbar-brand" href="/"><b>Doceria Online</b>
+                <img src="images/logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/index.html">Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/contato.html">Contato</a>
+                    </li>
+                </ul>
+                <div class="align-self-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/cadastro.html" class="nav-link text-white">Quero Me Cadastrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/login.html" class="nav-link text-white">Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
+                                title="5 produto(s) no carrinho"><small>5</small></span>
+                            <a href="/carrinho.html" class="nav-link text-white">
+                                <i class="bi-cart" style="font-size:24px;line-height:24px;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- lado direito header -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="form-check form-switch">
+                            <input onclick="trocarTemaAtual()"class="form-check-input" type="checkbox" role="switch" id="trocatematbn">
+                            <label id="temaTexto" class="form-check-label" for="trocatematbn">Trocar tema</label>
+                          </div>
+                    </li>
+                </ul>
+                </div>
             </div>
-          </div>
         </div>
-      </nav>
-
+    </nav>
       <div class="container">
         <div id="carouselMain" class="carousel slide carousel-dark" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -129,7 +140,7 @@
 
             <div class="row g-3">
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card text-center bg-light">
+                  <div class="card text-center">
                       <a href="#" class="position-absolute end-0 p-2 text-danger">
                           <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
                       </a>
@@ -140,7 +151,7 @@
                           R$ 4,50
                       </div>
                       <div class="card-body">
-                          <h5 class="card-title">Bolo de Chocolate</h5>
+                          <h5 class="card-title">Bolo</h5>
                           <p class="card-text truncar-3l">
                             Bolo de chocolate com cobertura de brigadeiro. Produto caseiro, sem pré mistura.
                           </p>
@@ -154,7 +165,7 @@
                   </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card text-center bg-light">
+                  <div class="card text-center">
                       <a href="#" class="position-absolute end-0 p-2 text-danger">
                           <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
                       </a>
@@ -165,7 +176,7 @@
                       <div class="card-body">
                           <h5 class="card-title">Pizza</h5>
                           <p class="card-text truncar-3l">
-                              Fatia de pizza de calabresa, presunto e queijo e marguerita.
+                              Fatia de pizza de calabresa, presunto e queijo e marguerita. Tem um sabor muito mais forte que não vai sair da sua mente.
                           </p>
                       </div>
                       <div class="card-footer">
@@ -177,7 +188,7 @@
                   </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card text-center bg-light">
+                  <div class="card text-center">
                       <a href="#" class="position-absolute end-0 p-2 text-danger">
                           <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
                       </a>
@@ -188,7 +199,7 @@
                       <div class="card-body">
                           <h5 class="card-title">Pão Brasileiro</h5>
                           <p class="card-text truncar-3l">
-                            Pão Francês untado com Manteiga e 6 Fatias de Mortadela.
+                            Pão Francês untado com Manteiga e 6 Fatias de Mortadela. Tem um sabor muito mais forte que não vai sair da sua mente.
                           </p>
                       </div>
                       <div class="card-footer">
@@ -202,7 +213,7 @@
                   </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card text-center bg-light">
+                  <div class="card text-center">
                       <a href="#" class="position-absolute end-0 p-2 text-danger">
                           <i class="bi-suit-heart-fill" style="font-size: 24px; line-height: 24px;"></i>
                       </a>
@@ -213,7 +224,7 @@
                       <div class="card-body">
                           <h5 class="card-title">Panqueca</h5>
                           <p class="card-text truncar-3l">
-                            Panqueca de chocolate com morango.
+                            Panqueca de chocolate com morango e tem um sabor muito mais forte que não vai sair da sua mente.
                           </p>
                       </div>
                       <div class="card-footer">
@@ -225,7 +236,7 @@
                   </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card text-center bg-light">
+                  <div class="card text-center">
                       <a href="#" class="position-absolute end-0 p-2 text-danger">
                           <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
                       </a>
@@ -234,9 +245,9 @@
                           R$ 5,00
                       </div>
                       <div class="card-body">
-                          <h5 class="card-title">Enroladinho Queijo e Presunto</h5>
+                          <h5 class="card-title">Enroladinho</h5>
                           <p class="card-text truncar-3l">
-                            Enroladinho Queijo e Presunto: o melhor da região.
+                            Enroladinho Queijo e Presunto: o melhor da região. Tem um sabor muito mais gostoso que não vai sair da sua mente.
                           </p>
                       </div>
                       <div class="card-footer">
@@ -248,7 +259,7 @@
                   </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card text-center bg-light">
+                  <div class="card text-center">
                       <a href="#" class="position-absolute end-0 p-2 text-danger">
                           <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
                       </a>
@@ -257,7 +268,7 @@
                           R$ 10,00
                       </div>
                       <div class="card-body">
-                          <h5 class="card-title">Pão Francês Pct. 10 Und</h5>
+                          <h5 class="card-title">Pão Francês</h5>
                           <p class="card-text truncar-3l">
                             Unidades de 50g, podendo haver variação mínima de peso para menos ou para mais.
                           </p>
@@ -271,7 +282,7 @@
                   </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card text-center bg-light">
+                  <div class="card text-center">
                       <a href="#" class="position-absolute end-0 p-2 text-danger">
                           <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
                       </a>
@@ -282,7 +293,7 @@
                       <div class="card-body">
                           <h5 class="card-title">Capuccino</h5>
                           <p class="card-text truncar-3l">
-                            Leva um terço de espresso no formato de 80 ml.
+                            Tem um sabor muito mais forte que não vai sair da sua mente e Leva um terço de espresso no formato de 80 ml.
                           </p>
                       </div>
                       <div class="card-footer">
@@ -294,7 +305,7 @@
                   </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card text-center bg-light">
+                  <div class="card text-center">
                       <a href="#" class="position-absolute end-0 p-2 text-danger">
                           <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
                       </a>
@@ -317,7 +328,7 @@
                   </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card text-center bg-light">
+                  <div class="card text-center">
                       <a href="#" class="position-absolute end-0 p-2 text-danger">
                           <i class="bi-suit-heart-fill" style="font-size: 24px; line-height: 24px;"></i>
                       </a>
@@ -340,7 +351,7 @@
                   </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card text-center bg-light">
+                  <div class="card text-center">
                       <a href="#" class="position-absolute end-0 p-2 text-danger">
                           <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
                       </a>
@@ -351,7 +362,7 @@
                       <div class="card-body">
                           <h5 class="card-title">Suco Natural</h5>
                           <p class="card-text truncar-3l">
-                            Suco de laranja feito na hora, no formato 300ML.
+                            Suco de laranja feito na hora, tem um sabor muito mais forte que não vai sair da sua mente é no formato 300ML.
                           </p>
                       </div>
                       <div class="card-footer">
@@ -363,7 +374,7 @@
                   </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card text-center bg-light">
+                  <div class="card text-center">
                       <a href="#" class="position-absolute end-0 p-2 text-danger">
                           <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
                       </a>
@@ -374,7 +385,7 @@
                       <div class="card-body">
                           <h5 class="card-title">Chá</h5>
                           <p class="card-text truncar-3l">
-                            Chá Matte Leão 450ML.
+                            Tem um sabor muito mais forte que não vai sair da sua mente é o Chá Matte Leão e Pêssego e Limão 450ML.
                           </p>
                       </div>
                       <div class="card-footer">
@@ -386,7 +397,7 @@
                   </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card text-center bg-light">
+                  <div class="card text-center">
                       <a href="#" class="position-absolute end-0 p-2 text-danger">
                           <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
                       </a>
@@ -471,5 +482,24 @@
   </div>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script>
+        var botaoTema = document.querySelector("#trocatematbn")
+
+        function trocarTemaAtual(){
+            var body = document.querySelector("body")
+            var temaTexto = document.querySelector("temaTexto")
+
+           if(botaoTema.checked){
+               body.setAttribute("data-bs-theme","dark")
+               temaTexto.innerHTML = "Tema Escuro"
+           }
+           else{
+               body.setAttribute("data-bs-theme","light")
+               temaTexto.innerHTML = "Tema Claro"
+           }
+        }
+    </script>
   </body>
 </html>
